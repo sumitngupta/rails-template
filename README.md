@@ -7,7 +7,8 @@ This is an opinionated rails template designed to get from zero to sane quick-st
 
 If this template requires major udpates everytime there are minor changes in the ecosystem, thats a bad sign.
 
-Please read the entire template to understand all the steps.
+**Please read the entire template to understand all the steps.**
+
 Some high level concepts this is going to account for:
 - Launchable to a publically-available deployed environment like Heroku. Terraform might be the awesome solution here but might fall out of scope.
 - Assumes a User.  Not sure if this is easy to do as an optional argument.  Authentication is common, this might be the strongest opinion. https://guides.rubyonrails.org/rails_application_templates.html#ask-question
@@ -19,8 +20,8 @@ Some high level concepts this is going to account for:
   * Open source Design System pre-installed.  Material?
   * Code quality is paramount so linters with sane defaults
 
-# Command to run:
-``
+### Command to run:
+```
 rails _6.0.0.beta1_ new PROJECTNAME \
   --skip-test \
   --webpack=react \
@@ -28,4 +29,4 @@ rails _6.0.0.beta1_ new PROJECTNAME \
   --database=postgresql \
   --skip-coffee \
   -m https://gist.githubusercontent.com/sumitngupta/4ee72a44c6d08a45fc6d1a56fb9102cf/raw/601ad1752c497d6570ea0ace0bd2fdd024d0b202/rails-template.rb
-``
+```
