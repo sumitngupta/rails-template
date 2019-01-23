@@ -1,4 +1,5 @@
 def main_script
+
   add_gems
 
   run_gem_installs
@@ -9,6 +10,13 @@ def main_script
   after_bundle do
     git_init
   end
+
+
+  display_manual_instructions
+end
+
+def display_manual_instructions
+  # Set Git URL
 end
 
 def copy_testing_configs
@@ -75,15 +83,6 @@ end
 
 # Initialize Git Repo
 
-# Configure Application.rb
-environment 'config.time_zone = "Pacific Time (US & Canada)"'
-
-# Autoload some paths I regularly use for abstractions
-environment 'config.autoload_paths += %W[#{Rails.root}/lib]'
-environment 'config.eager_load_paths += %W[#{Rails.root}/lib]'
-
-environment 'config.font_assets.origin = "*"'
-environment 'config.sass.preferred_syntax = :sass'
 environment 'config.generators do |g|
   g.stylesheets false
   g.helper false
@@ -94,9 +93,20 @@ environment 'config.generators do |g|
                    routing_specs: false
 
   g.fixture_replacement :factory_bot
-end'
+end \n'
+
+# Configure Application.rb
+environment 'config.time_zone = "Pacific Time (US & Canada)"'
+
+# Autoload some paths I regularly use for abstractions
+environment 'config.autoload_paths += %W[#{Rails.root}/lib]'
+environment 'config.eager_load_paths += %W[#{Rails.root}/lib]'
+
+environment 'config.font_assets.origin = "*"'
+environment 'config.sass.preferred_syntax = :sass'
 
 =begin
 Install default rubocop configs
 
+Describe manual steps
 =end
