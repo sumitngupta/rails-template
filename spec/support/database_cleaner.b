@@ -1,0 +1,21 @@
+# frozen_string_literal: true
+
+RSpec.configure do |config|
+  config.before(:suite) do
+    DatabaseCleaner.clean_with(:truncation)
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.strategy = :transaction
+    Rails.cache.clear
+  end
+
+  config.before(:each) do
+    DatabaseCleaner.start
+  end
+
+  config.after(:each) do
+    Rails.cache.clear
+    DatabaseCleaner.clean
+  end
+end
