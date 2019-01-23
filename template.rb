@@ -93,7 +93,7 @@ environment 'config.generators do |g|
                    routing_specs: false
 
   g.fixture_replacement :factory_bot
-end \n'
+end'
 
 # Configure Application.rb
 environment 'config.time_zone = "Pacific Time (US & Canada)"'
