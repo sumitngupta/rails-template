@@ -15,6 +15,7 @@ end
 
 def display_manual_instructions
   # Set Git URL
+  p 'Instructions!'
 end
 
 def run_gem_installs
@@ -89,10 +90,6 @@ end'
 
 # Configure Application.rb
 environment 'config.time_zone = "Pacific Time (US & Canada)"'
-
-# Autoload some paths I regularly use for abstractions
-environment 'config.autoload_paths += %W[#{Rails.root}/lib]'
-environment 'config.eager_load_paths += %W[#{Rails.root}/lib]'
 
 environment 'config.font_assets.origin = "*"'
 environment 'config.sass.preferred_syntax = :sass'
