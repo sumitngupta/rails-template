@@ -3,24 +3,18 @@ def main_script
   add_gems
 
   run_gem_installs
-  # Copy readme template
+
   copy_file 'readme_template.md', 'README.md'
-  copy_testing_configs
 
   after_bundle do
     git_init
   end
-
 
   display_manual_instructions
 end
 
 def display_manual_instructions
   # Set Git URL
-end
-
-def copy_testing_configs
-  copy_file 'spec/support/database_cleaner.rb', 'spec/support/database_cleaner.rb'
 end
 
 def run_gem_installs
@@ -67,8 +61,6 @@ def add_gems
     gem 'shoulda'
     gem 'shoulda-callback-matchers'
     gem 'shoulda-matchers'
-
-    gem 'database_cleaner'
 
     gem 'factory_bot_rails'
     gem 'faker'
